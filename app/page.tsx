@@ -100,7 +100,7 @@ export default function HomePage() {
         Who is Sunstang
       </p>
       <h2 className="max-w-xl text-3xl leading-tight tracking-[-0.03em] md:text-5xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       </h2>
     </motion.div>
 
@@ -108,6 +108,7 @@ export default function HomePage() {
       <Carousel />
     </motion.div>
   </motion.div>
+
 </section>
 
 <section className="relative border-t border-[#181818]/10 px-6 py-24 md:py-32">
