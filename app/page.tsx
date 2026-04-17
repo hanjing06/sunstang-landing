@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Navbar from "./components/navbar";
 import Carousel from "./components/carousel";
 
-const fadeUp = {
+const fadeUp:Variants = {
   hidden: { opacity: 0, y: 28 },
   show: {
     opacity: 1,
@@ -13,7 +13,7 @@ const fadeUp = {
   },
 };
 
-const stagger = {
+const stagger:Variants = {
   hidden: {},
   show: {
     transition: {
