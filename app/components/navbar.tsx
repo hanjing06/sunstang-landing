@@ -11,6 +11,9 @@ const navLinks = [
   { href: "/about", label: "About" },
 ];
 
+const teamFeeUrl =
+  "https://estore.eng.uwo.ca/products/sunstang-team-fee";
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +35,6 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
           <Link
             href="/"
-            aria-label="Sunstang home"
             className="flex shrink-0 items-center gap-2.5 rounded-sm"
             onClick={() => setIsOpen(false)}
           >
@@ -78,7 +80,10 @@ export default function Navbar() {
             </ul>
 
             <a
-              href="mailto:email@example.com"
+              href={teamFeeUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Get Involved: pay the Sunstang team fee, opens in a new tab"
               className="inline-flex items-center rounded-md bg-brand px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-brand-dark"
             >
               Get Involved
@@ -123,7 +128,10 @@ export default function Navbar() {
               ))}
             </ul>
             <a
-              href="mailto:email@example.com"
+              href={teamFeeUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Get Involved: pay the Sunstang team fee, opens in a new tab"
               className="mx-auto mt-4 flex max-w-7xl items-center justify-center rounded-md bg-brand px-5 py-3 font-semibold text-white"
             >
               Get Involved

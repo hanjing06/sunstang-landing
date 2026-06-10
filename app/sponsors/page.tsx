@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sponsors | Western Sunstang",
+  title: "Sponsors",
   description: "Sponsorship information for Western Sunstang.",
 };
 
@@ -29,12 +29,9 @@ export default function SponsorsPage() {
           manufacturing, and competition. Sponsor details will be added here as
           they are confirmed.
         </p>
-        <a
-          href="mailto:email@example.com"
-          className="mt-8 inline-flex rounded-md bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark"
-        >
-          Ask about sponsorship
-        </a>
+        <p className="mt-8 text-sm font-semibold text-brand-dark">
+          Sponsorship contact details coming soon
+        </p>
       </section>
     </main>
   );

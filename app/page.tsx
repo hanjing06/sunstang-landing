@@ -115,7 +115,10 @@ export default function HomePage() {
               vehicle built for competition.
             </p>
             <a
-              href="mailto:email@example.com"
+              href="https://estore.eng.uwo.ca/products/sunstang-team-fee"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Join Us: pay the Sunstang team fee, opens in a new tab"
               className="mt-8 inline-flex rounded-md bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark"
             >
               Join Us

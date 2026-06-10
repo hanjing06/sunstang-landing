@@ -93,7 +93,7 @@ export default function Carousel() {
       </button>
 
       <div
-        className="absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2"
+        className="absolute inset-x-0 bottom-2 z-10 flex items-center justify-center"
         aria-label="Choose a photo"
       >
         {images.map((image, imageIndex) => (
@@ -103,11 +103,25 @@ export default function Carousel() {
             onClick={() => setIndex(imageIndex)}
             aria-label={`Show photo ${imageIndex + 1}`}
             aria-current={imageIndex === index}
-            className={`h-2 rounded-full bg-white shadow-sm transition-all ${
-              imageIndex === index ? "w-8" : "w-2 opacity-65"
-            }`}
-          />
+            className="flex h-11 w-11 items-center justify-center rounded-full"
+          >
+            <span
+              aria-hidden="true"
+              className={`h-2 rounded-full bg-white shadow-sm transition-all ${
+                imageIndex === index ? "w-8" : "w-2 opacity-65"
+              }`}
+            />
+          </button>
         ))}
+
+        <button
+          type="button"
+          onClick={() => setIsPaused((current) => !current)}
+          aria-label={isPaused ? "Play photo slideshow" : "Pause photo slideshow"}
+          className="ml-1 flex h-11 w-11 items-center justify-center rounded-full bg-surface/90 text-sm font-semibold text-ink shadow-sm"
+        >
+          <span aria-hidden="true">{isPaused ? "▶" : "Ⅱ"}</span>
+        </button>
       </div>
 
       <figcaption className="sr-only" aria-live="polite">

@@ -3,7 +3,7 @@ import TeamCard from "./team-card";
 import { teamGroups } from "./team-data";
 
 export const metadata: Metadata = {
-  title: "Meet the Team | Western Sunstang",
+  title: "Meet the Team",
   description: "Meet the student leaders behind Western Sunstang.",
 };
 

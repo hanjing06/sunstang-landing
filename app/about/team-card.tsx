@@ -42,13 +42,7 @@ export default function TeamCard({
         </p>
 
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border pt-3 text-sm">
-          <a
-            href="mailto:email@example.com"
-            aria-label={`Email ${member.name}`}
-            className="rounded-sm text-muted transition-colors hover:text-brand"
-          >
-            email@example.com
-          </a>
+          <span className="text-xs text-muted">Email coming soon</span>
 
           {member.linkedin ? (
             <a
@@ -56,7 +50,7 @@ export default function TeamCard({
               target="_blank"
               rel="noreferrer"
               aria-label={`${member.name} on LinkedIn, opens in a new tab`}
-              className="inline-flex items-center gap-1.5 rounded-sm font-medium text-brand-dark transition-colors hover:text-brand"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-sm font-medium text-brand-dark transition-colors hover:text-brand"
             >
               <LinkedInIcon />
               LinkedIn
