@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/navbar";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Western Sunstang",
@@ -22,7 +15,7 @@ export default function RootLayout({
   return (
   
     <html lang="en">
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="flex min-h-full flex-col font-sans">
          <Navbar />
          {children}
       </body>

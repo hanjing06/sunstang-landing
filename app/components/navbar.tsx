@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -11,28 +12,33 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#181818]/10 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#181818]/10 bg-white/90 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center border border-[#181818]/20 bg-white text-[9px] font-medium uppercase tracking-[0.22em] text-[#4F4F4F]">
-            Logo
-          </div>
-
-          <div className="flex flex-col leading-none">
-            <motion.span
-              className="text-[1rem] font-semibold uppercase tracking-[0.16em] text-[#181818]"
-              transition={{ duration: 0.25, ease: "easeOut" }}
-            >
+        <Link
+          href="/"
+          aria-label="Sunstang home"
+          className="flex shrink-0 items-center gap-2.5"
+        >
+          <Image
+            src="/brand/sunstang-mark.png"
+            alt=""
+            width={330}
+            height={330}
+            priority
+            className="h-12 w-12"
+          />
+          <span className="flex flex-col leading-none">
+            <span className="text-[1rem] font-semibold uppercase tracking-[0.16em] text-[#4f278c]">
               Sunstang
-            </motion.span>
-            <span className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#4F4F4F]">
-              Western Solar Car
             </span>
-          </div>
+            <span className="mt-1 text-[9px] uppercase tracking-[0.16em] text-[#4F4F4F]">
+              Solar Car Project
+            </span>
+          </span>
         </Link>
 
-        <div className="flex items-center gap-8">
-          <ul className="flex items-center gap-7">
+        <div className="flex items-center gap-4 md:gap-8">
+          <ul className="hidden items-center gap-7 md:flex">
             {navLinks.map(({ href, label }) => (
               <li key={href}>
                 <Link href={href}>
